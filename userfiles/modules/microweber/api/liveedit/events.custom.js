@@ -25,8 +25,9 @@ mw.liveedit.handleCustomEvents = function() {
         var toSelect = mw.tools.firstBlockLevel(target);
 
 
-
-        mw.liveEditSelector.select(toSelect);
+        if(can){
+            mw.liveEditSelector.select(toSelect);
+        }
 
         if(mw.liveEditDomTree) {
             mw.liveEditDomTree.select(toSelect);
